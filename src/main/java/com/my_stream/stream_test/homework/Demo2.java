@@ -11,7 +11,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
- * 终结操作
+ * Stream流-终结操作的学习
  *
  * @Author zj
  * @Date 2022/4/23
@@ -41,7 +41,7 @@ public class Demo2 {
         Integer reduce = authors.stream()
                 .distinct()
                 .map(author -> author.getAge())
-                .reduce(Integer.MAX_VALUE, (integer, integer2) -> integer < integer2 ? integer : integer2);
+                .reduce(Integer.MAX_VALUE, (result, element) -> result < element ? result : element);
         System.out.println(reduce);
     }
 
@@ -50,7 +50,7 @@ public class Demo2 {
         Integer reduce = authors.stream()
                 .distinct()
                 .map(author -> author.getAge())
-                .reduce(Integer.MIN_VALUE, (integer, integer2) -> integer > integer2 ? integer : integer2);
+                .reduce(Integer.MIN_VALUE, (result, element) -> result > element ? result : element);
         System.out.println(reduce);
     }
 

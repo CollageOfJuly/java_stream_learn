@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * 中间操作的学习
+ * stream流-中间操作的学习
  *
  * @Author zj
  * @Date 2022/4/19
